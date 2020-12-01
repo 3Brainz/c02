@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppunzo <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/01 17:26:06 by ppunzo            #+#    #+#             */
-/*   Updated: 2020/12/01 17:26:09 by ppunzo           ###   ########.fr       */
+/*   Created: 2020/12/01 19:45:45 by ppunzo            #+#    #+#             */
+/*   Updated: 2020/12/01 19:45:48 by ppunzo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_lowercase(char *str);
+char	*ft_strupcase(char *str)
 {
-	int				is_low_c;
 	unsigned int	i;
 
-	is_low_c = 1;
 	i = 0;
-	while (is_low_c == 1 && str[i] != '\0')
+	while (char[i] != '\0')
 	{
-		if ((str[i] >= 97 && str[i] <= 122))
-			is_low_c = 1;
-		else
-			is_low_c = 0;
-		i++;
+		if (char[i] <= 122 && char[i] >= 97)
+			char[i] = char[i] - 42;
+		i++
 	}
-	return (is_low_c);
+	return (char);
 }
